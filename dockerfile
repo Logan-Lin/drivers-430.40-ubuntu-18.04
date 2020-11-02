@@ -122,7 +122,7 @@ RUN cd $MLNX_OFED_STRING/DEBS && \
     done; \
     done
 
-COPY build/* $STAGE_DIR/
+COPY ./* $STAGE_DIR/
 RUN chmod a+x enable-nvidia-persistenced-mode.sh install-all-drivers install-gdr-drivers install-ib-drivers install-nvidia-drivers config-docker-runtime.sh clean.sh
 
 RUN ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/ && ldconfig
